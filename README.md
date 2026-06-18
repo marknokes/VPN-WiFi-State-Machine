@@ -15,6 +15,10 @@ The script performs the following steps:
    * **Home network:** WireGuard tunnel is stopped.
    * **Any other network:** WireGuard tunnel is started.
 
+## DNS Management
+
+In addition to managing the WireGuard tunnel state, the script also automatically adjusts the DNS configuration of the active Wi-Fi adapter. When connected to a trusted home network, the adapter's DNS settings are reset to use the network's default configuration (typically provided by your router via DHCP). When connected to any untrusted or remote network, the script configures the adapter to use Cloudflare's public DNS resolvers (1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, and 2606:4700:4700::1001). The DNS settings are only changed when necessary, avoiding unnecessary network reconfiguration and ensuring consistent name resolution behavior while using the VPN on public networks.
+
 ## Configuration
 
 Edit the following variables in the main script:
