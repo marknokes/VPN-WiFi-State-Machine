@@ -19,6 +19,14 @@ $xml = @"
     </EventTrigger>
   </Triggers>
 
+  <Settings>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <MultipleInstancesPolicy>Queue</MultipleInstancesPolicy>
+    <ExecutionTimeLimit>PT5M</ExecutionTimeLimit>
+    <StartWhenAvailable>true</StartWhenAvailable>
+  </Settings>
+
   <Actions Context="System">
     <Exec>
       <Command>powershell.exe</Command>
